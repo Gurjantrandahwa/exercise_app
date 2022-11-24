@@ -7,7 +7,7 @@ export default function HeroBanner() {
     return <div className={"home-banner"}>
         <Box
             sx={{
-                mt: {lg: "212px", xs: "70px"},
+                mt: {lg: "130px", xs: "70px"},
                 ml: {sm: "5px"}
             }}
             position={"relative"}
@@ -24,7 +24,7 @@ export default function HeroBanner() {
                         }}
                         mb={"23px"}
                         mt={"30px"}>
-            Face,Smile and Repeat
+            Face, Smile and Repeat
             </Typography>
             <Typography
                 fontSize={"22px"}
@@ -50,7 +50,7 @@ export default function HeroBanner() {
                     opacity: 0.2,
                     display: {lg: "block", xs: "none"}
                 }}
-                fontSize={"120px"} mt={3}>
+                fontSize={"105px"} mt={3}>
                 Let's Exercise
             </Typography>
             <img
