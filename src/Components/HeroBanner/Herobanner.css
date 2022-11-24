@@ -1,0 +1,17 @@
+
+.home-banner {
+
+}
+
+.home-banner-img {
+    position: absolute;
+    right: 100px;
+    top: -270px;
+    height: 850px;
+}
+
+@media screen and (max-width: 1200px) {
+    .home-banner-img {
+        display: none;
+    }
+}
