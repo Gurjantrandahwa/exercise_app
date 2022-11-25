@@ -8,7 +8,6 @@ import Exercises from "../../Components/Exercises/Exercises";
 export default function Home() {
     const [bodyPart, setBodyPart] = useState("all")
     const [exercises, setExercises] = useState([])
-
     return <Box>
         <HeroBanner/>
         <SearchExercise
@@ -17,6 +16,7 @@ export default function Home() {
             setBodyPart={setBodyPart}
         />
         <Exercises
+            setExercises={setExercises}
             exercises={exercises}
             bodyPart={bodyPart}
             setBodyPart={setBodyPart}/>

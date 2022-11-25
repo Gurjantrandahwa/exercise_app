@@ -1,7 +1,7 @@
 import React from "react";
 import {Stack, Typography} from "@mui/material";
 
-export default function BodyPart({item, bodyPart, setBodyPart}) {
+export default function BodyPart({item,setBodyPart, bodyPart}) {
     return <div>
         <Stack
             type={"button"}
@@ -18,7 +18,7 @@ export default function BodyPart({item, bodyPart, setBodyPart}) {
             }}
             onClick={() => {
                 setBodyPart(item);
-                window.scroll({top: 1800, left: 100, behavior: "smooth "})
+                 window.scroll({top: 1400, left: 100, behavior: "smooth"})
             }
             }
         >

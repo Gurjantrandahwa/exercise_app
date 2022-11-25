@@ -1,0 +1,10 @@
+.exerciseCard{
+
+}
+.exerciseCard img{
+
+    mask-image: linear-gradient(#7337b4, transparent);
+}
+.exerciseCard a{
+    text-decoration: none!important;
+}

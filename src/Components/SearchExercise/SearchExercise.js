@@ -67,7 +67,6 @@ export default function SearchExercise({
                 }}
                 variant={"outlined"}
                 onChange={(e) => setSearch(e.target.value.toLowerCase())}
-
                 placeholder={"Search"}
                 type={"text"}
                 value={search}
@@ -95,7 +94,7 @@ export default function SearchExercise({
         }}>
             <BodyPartsScrollbar data={bodyParts}
                                 bodyPart={bodyPart}
-                                setBodyPart={setBodyPart}/>
+                                setBodyPart={setBodyPart} isBodyParts/>
         </Box>
     </div>
 }
