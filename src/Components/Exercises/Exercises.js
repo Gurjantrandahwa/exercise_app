@@ -36,12 +36,12 @@ export default function Exercises({exercises, setExercises, bodyPart}) {
 
                 mt={"40px"}
                 p={"20px"}>
-        <Typography variant={"h3"}>
+        <Typography variant={"h4"} mb={"30px"} color={"#ff2625"} pl={"30px"}>
             Showing Results
         </Typography>
         <Stack
             direction={"row"}
-            sx={{gap: {lg: "110px", xs: "50px"}}}
+            sx={{gap: {lg: "50px", xs: "30px"}}}
             flexWrap={"wrap"} justifyContent={"center"}>
             {currentExercises.map((exercise, index) => {
                 return <ExerciseCard key={index}

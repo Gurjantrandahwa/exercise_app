@@ -1,7 +1,9 @@
 import React from "react";
 import {Stack, Typography} from "@mui/material";
 
-export default function BodyPart({item,setBodyPart, bodyPart}) {
+export default function BodyPart({images, item, setBodyPart, bodyPart}) {
+    console.log(images)
+
     return <div>
         <Stack
             type={"button"}
@@ -14,18 +16,19 @@ export default function BodyPart({item,setBodyPart, bodyPart}) {
                 width: "270px",
                 height: "280px",
                 cursor: "pointer",
-                gap: "47px"
+                gap: "30px"
             }}
             onClick={() => {
                 setBodyPart(item);
-                 window.scroll({top: 1400, left: 100, behavior: "smooth"})
+                window.scroll({top: 1400, left: 100, behavior: "smooth"})
             }
             }
         >
-            <img src={"https://cdn.dribbble.com/users/60447/screenshots/2603082/gymtown_logo_design_ancitis.jpg"}
+            <img src={"https://i.pinimg.com/564x/a6/20/ab/a620ab777c73fbdd9195331230a00a5f.jpg"}
                  alt={""}
-                 width={100}
-                 height={120}
+                 style={{objectFit:"cover",marginTop:"20px"}}
+                 width={150}
+                 height={100}
 
             />
             <Typography

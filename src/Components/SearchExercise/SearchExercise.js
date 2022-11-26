@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react"
 import {Box, Button, Stack, TextField, Typography} from "@mui/material";
-import "./searchExercise.css";
+
 import {exerciseOptions, fetchData} from "../../Data/fetchData";
 import BodyPartsScrollbar from "../BodyParts/BodyPartsScrollbar";
 
@@ -10,7 +10,14 @@ export default function SearchExercise({
     const [search, setSearch] = useState('')
     const [bodyParts, setBodyParts] = useState([])
 
-
+    const [image, setImages] = useState([
+        {
+            img: "https://i.pinimg.com/564x/78/ec/17/78ec177c50fdfed042927126f0760c77.jpg"
+        },
+        {
+            img: "https://i.pinimg.com/564x/50/c1/e1/50c1e1bb3953e047c7a5705c38995dd4.jpg"
+        },
+    ])
     useEffect(() => {
         const fetchExercisesData = async () => {
             const bodyPartsData = await fetchData(
@@ -20,12 +27,12 @@ export default function SearchExercise({
         }
         fetchExercisesData();
     }, [])
+
     const handleSearch = async () => {
         if (search) {
             const exerciseData = await fetchData(
                 'https://exercisedb.p.rapidapi.com/exercises', exerciseOptions
             )
-            console.log(exerciseData)
             const searchExercises = exerciseData.filter(
                 (exercise) => exercise.name.toLowerCase().includes(search)
                     || exercise.target.toLowerCase().includes(search)
@@ -36,16 +43,16 @@ export default function SearchExercise({
             setExercises(searchExercises)
         }
     }
-    return <div className={"search-exercise"}>
-        <Stack alignItems={"center"}
-               mt={"60px"}
-               justifyContent={"center"}
-               p={"20px"}>
+    return <div style={{padding: "20px"}}>
+        <Stack
+            mt={"65px"}
+            justifyContent={"center"}
+        >
             <Typography fontWeight={700}
-                        sx={{fontSize: {lg: "44px", xs: "30px"}}}
+                        sx={{fontSize: {lg: "35px", xs: "25px"}}}
                         mb={"50px"}
-                        textAlign={"center"}>
-                Some great exercises you know and spend time
+            >
+                Some great exercises you should know and spend your time
             </Typography>
         </Stack>
         <Box position={"relative"}
@@ -56,12 +63,12 @@ export default function SearchExercise({
                 className={"search-exercise-input"}
                 sx={{
                     input: {
-                        fontWeight: "700",
+                        fontWeight: "600",
                         border: "none",
                         borderRadius: "4px",
                         outline: "none"
                     },
-                    width: {lg: "70%", xs: "350px"},
+                    width: {lg: "74%", xs: "350px"},
                     backgroundColor: "white",
 
                 }}
@@ -78,7 +85,7 @@ export default function SearchExercise({
                     bgcolor: "#FF2625",
                     color: '#fff',
                     textTransform: "none",
-                    width: {lg: "175px", xs: "80px"},
+                    width: {lg: "100px", xs: "80px"},
                     fontSize: {lg: "20px", xs: "14px"},
                     height: "56px",
                     position: "absolute"
@@ -88,11 +95,13 @@ export default function SearchExercise({
         </Box>
 
         <Box sx={{
+            mt: "100px",
             position: "relative",
             width: "100%",
-            p: "20px"
+
         }}>
             <BodyPartsScrollbar data={bodyParts}
+                                images={image}
                                 bodyPart={bodyPart}
                                 setBodyPart={setBodyPart} isBodyParts/>
         </Box>

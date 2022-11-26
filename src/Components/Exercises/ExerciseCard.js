@@ -32,13 +32,14 @@ export default function ExerciseCard({exercise}) {
                 </Button>
             </Stack>
             <Typography
+                maxWidth={"350px"}
                 mt={"20px"}
-            ml={"21px"}
-            color={"white"}
-            fontWeight={"bold"}
-            pb={"10px"}
-            textTransform={"capitalize"}
-            fontSize={"18px"}>
+                ml={"21px"}
+                color={"white"}
+                fontWeight={"bold"}
+                pb={"10px"}
+                textTransform={"capitalize"}
+                fontSize={"18px"}>
                 {exercise.name}
             </Typography>
 

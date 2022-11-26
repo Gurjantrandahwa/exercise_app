@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from "react";
-import "./ExerciseDetail.css";
 import {Box} from "@mui/material";
 import DetailOfExercise from "../../Components/DetailOfExercise/DetailOfExercise";
 import ExerciseVideos from "../../Components/ExerciseVideos/ExerciseVideos";
